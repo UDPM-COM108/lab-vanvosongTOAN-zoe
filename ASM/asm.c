@@ -3,7 +3,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-
 //phân số (case 10)
 typedef struct { int tu, mau; } PhanSo;
 PhanSo rutgon(PhanSo ps) {
@@ -22,14 +21,12 @@ void xuatps(PhanSo ps) {//khai báo cho case 10
     if (ps.mau == 1) printf("%d", ps.tu);
     else printf("%d/%d", ps.tu, ps.mau);
 }
-
 //xếp loại sinh viên(case 8)
 typedef struct {
     char hoten[50];
     float diem;
     char hocluc[20];
 } sinhvien;
-
 void xeploai(sinhvien *s) {//khai báo cho case 8
     if (s->diem >= 9.0) strcpy(s->hocluc, "Xuất sắc");
     else if (s->diem >= 8.0) strcpy(s->hocluc, "Giỏi");
@@ -37,7 +34,6 @@ void xeploai(sinhvien *s) {//khai báo cho case 8
     else if (s->diem >= 5.0) strcpy(s->hocluc, "Trung bình");
     else strcpy(s->hocluc, "Yếu");
 }
-
 void sapxep(sinhvien a[], int n) {
     for (int i = 0; i < n-1; i++)
         for (int j = i+1; j < n; j++)
@@ -47,23 +43,19 @@ void sapxep(sinhvien a[], int n) {
                 a[j] = temp;
             }
 }
-
 void xuat(sinhvien a[], int n) {
     printf("\n%-25s %-10s %-15s\n", "Họ tên", "Điểm", "Học lực");
     for (int i = 0; i < n; i++)
         printf("%-25s %-10.2f %-15s\n", a[i].hoten, a[i].diem, a[i].hocluc);
 }
-
 int main() {
     char boDem[10];
     int luachon;//khai báo cho fgets
-
     do {
         printf(" ______________________________\n");
         printf("|PHAM NGUYEN THIEN TOAN PS49327|\n");
         printf("|------------------------------|\n");
         printf("______________MENU______________\n");
-        printf("Vui lòng chọn yêu cầu bạn muốn:\n");
         printf("0.exit (kết thúc chương trình)\n");
         printf("1.Kiểm tra số nguyên.\n");
         printf("2.Tìm Ước số chung và bội số chung của 2 số.\n");
@@ -75,11 +67,10 @@ int main() {
         printf("8.Sắp xếp thông tin sinh viên.\n");
         printf("9.Xây dựng game FPOLY-LOTT (2/15)\n");
         printf("10.Xây dựng chương trình tính toán phân số\n");
-
+        printf("Vui lòng chọn yêu cầu bạn muốn:\n");
         fgets(boDem, sizeof(boDem), stdin);             //dùng scanf lỗi hoài nên đổi hết qua fgets
         boDem[strcspn(boDem, "\n")] = 0; // bỏ \n
         luachon = atoi(boDem);
-
         switch(luachon) {
             case 1: {
                 int x1;
@@ -91,7 +82,6 @@ int main() {
                 }
                 while(getchar() != '\n'); // loại Enter
                 printf("Số %d là số nguyên.\n", x1);
-
                 if(x1 < 2) printf("Số %d không phải số nguyên tố.\n", x1);
                 else {
                     int check = 1;
@@ -100,7 +90,6 @@ int main() {
                     if(check) printf("Số %d là số nguyên tố.\n", x1);
                     else printf("Số %d không phải số nguyên tố.\n", x1);
                 }
-
                 if(x1<0) printf("Số %d không phải là số chính phương.\n", x1);
                 else { int y=sqrt(x1); if(y*y==x1) printf("Số %d là số chính phương.\n", x1); else printf("Số %d không phải là số chính phương.\n", x1);}
                 break;
@@ -213,10 +202,8 @@ int main() {
             case 0:
             printf("Hẹn gặp lại!!");
                 break;
-            default: printf("Lỗi, chọn lại\n"); break;
+            default: printf("Lỗi, vui lòng chọn lại\n"); break;
         }
-
     } while(luachon!=0);
-
     return 0;
 }
