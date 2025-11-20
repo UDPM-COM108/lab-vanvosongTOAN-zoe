@@ -28,42 +28,42 @@ int main() {
         luachon = atoi(boDem);
         switch(luachon) {
             case 1: {
-                printf("Kiểm tra số nguyên");
+                printf("Kiểm tra số nguyên\n");
                 break;
             }
             case 2: {
-                printf("Tìm ước số chung và bội số chung của hai số");
+                printf("Tìm ước số chung và bội số chung của hai số\n");
                 break;
             }
             case 3: {
-                printf("Chương trình tính tiền quán karoke");
+                printf("Chương trình tính tiền quán karoke\n");
                 break;
             }
             case 4: {
-                printf("Tính tiền điện");
+                printf("Tính tiền điện\n");
             }
             case 5: {
-                printf("Chức năng đổi tiền");
+                printf("Chức năng đổi tiền\n");
                 break;
             }
             case 6: {
-                printf("Tính lãi xuất vay ngân hàng trả góp");
+                printf("Tính lãi xuất vay ngân hàng trả góp\n");
                 break;
             }
             case 7: {
-               printf("Chương trình vay mua xe");
+               printf("Chương trình vay mua xe\n");
                 break;
             }
             case 8: {
-                printf("Sắp xếp thông tin sinh viên");
+                printf("Sắp xếp thông tin sinh viên\n");
                 break;
             }
             case 9: {
-                printf("Xây dựng game FPOLY-LOTT");
+                printf("Xây dựng game FPOLY-LOTT\n");
                 break;
             }
             case 10: {
-                printf("Chương tình tính toán phân số");
+                printf("Chương tình tính toán phân số\n");
                 break;
             }
             case 0:
